@@ -1,4 +1,4 @@
-{% set version = "1.0.2" %}
+{% set version = "1.0.3" %}
 
 package:
   name: xgems
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://bitbucket.org/gems4/xgems/get/v{{ version }}.tar.gz
-  sha256: 80c73080dde2521ce2f353cfaf8f17a38e3b4372aef82254b74d5c16d9cb4a13
+  sha256: eab5793573f9abdaa2dd8bc3555c3bc4a8457738468baf36f952e8bf7344e36a
 
 build:
-  number: 2
+  number: 0
   skip: true  # [win and vc<14]
 
 requirements:
