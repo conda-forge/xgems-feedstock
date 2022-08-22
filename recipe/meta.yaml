@@ -23,6 +23,7 @@ requirements:
     - pybind11
     - eigen
     - python
+    - spdlog =1.10.0
   run:
     - python
 
