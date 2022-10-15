@@ -1,15 +1,18 @@
-{% set version = "1.0.2" %}
+{% set version = "1.0.4" %}
 
 package:
   name: xgems
   version: {{ version }}
 
 source:
-  url: https://bitbucket.org/gems4/xgems/get/v{{ version }}.tar.gz
-  sha256: 80c73080dde2521ce2f353cfaf8f17a38e3b4372aef82254b74d5c16d9cb4a13
+  #url: https://bitbucket.org/gems4/xgems/get/v{{ version }}.tar.gz
+  #sha256: 3c8aa86ec8d7829f706106f192e8f1b8005ab252c7be6e8100fc113e3ce9dac1
+  
+  git_url: https://dmiron@bitbucket.org/gems4/xgems.git
+  git_rev: fix-build
 
 build:
-  number: 3
+  number: 0
   skip: true  # [win and vc<14]
 
 requirements:
@@ -19,12 +22,19 @@ requirements:
     - ninja  # [win]
     - make  # [unix]
   host:
-    - gems3k =4.2.1
+    - gems3k =4.3.2
+    - spdlog =1.10.0
+    - chemicalfun
+    - thermofun =0.4.0
     - pybind11
     - eigen
     - python
   run:
     - python
+    - gems3k =4.3.2
+    - spdlog =1.10.0
+    - chemicalfun
+    - thermofun =0.4.0
 
 test:
   commands:
