@@ -5,14 +5,14 @@ package:
   version: {{ version }}
 
 source:
-  #url: https://bitbucket.org/gems4/xgems/get/v{{ version }}.tar.gz
-  #sha256: 3c8aa86ec8d7829f706106f192e8f1b8005ab252c7be6e8100fc113e3ce9dac1
+  url: https://bitbucket.org/gems4/xgems/get/v{{ version }}.tar.gz
+  sha256: 0dc19bfc70c33804b194a8b13d1a50fe950c6d09bc52ec648a61703a3bb6e9dc
   
-  git_url: https://dmiron@bitbucket.org/gems4/xgems.git
-  git_rev: fix-build
+  #git_url: https://dmiron@bitbucket.org/gems4/xgems.git
+  #git_rev: fix-build
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win and vc<14]
 
 requirements:
