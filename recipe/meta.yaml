@@ -7,12 +7,12 @@ package:
 source:
   url: https://bitbucket.org/gems4/xgems/get/v{{ version }}.tar.gz
   sha256: f2859fae578f5e9d508f37f3d1935b3f3d64d07cfde6afe49125e003842e9111
-  
+
   #git_url: https://dmiron@bitbucket.org/gems4/xgems.git
   #git_rev: fix-build
 
 build:
-  number: 2
+  number: 0
   skip: true  # [win and vc<14]
 
 requirements:
