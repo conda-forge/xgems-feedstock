@@ -12,7 +12,7 @@ source:
   #git_rev: fix-build
 
 build:
-  number: 3
+  number: 4
   skip: true  # [win and vc<14]
 
 requirements:
@@ -22,14 +22,14 @@ requirements:
     - ninja  # [win]
     - make  # [unix]
   host:
-    - gems3k =4.3.3
+    - gems3k >=4.3.4
     - thermofun >=0.4.1
     - pybind11
     - eigen
     - python
   run:
     - python
-    - gems3k =4.3.3
+    - gems3k >=4.3.4
     - thermofun >=0.4.1
 
 test:
