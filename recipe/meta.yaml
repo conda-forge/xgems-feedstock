@@ -22,15 +22,15 @@ requirements:
     - ninja  # [win]
     - make  # [unix]
   host:
-    - gems3k =4.3.3
-    - thermofun >=0.4.1
+    - gems3k
+    - thermofun
     - pybind11
     - eigen
     - python
   run:
     - python
-    - gems3k =4.3.3
-    - thermofun >=0.4.1
+    - gems3k
+    - thermofun
 
 test:
   commands:
