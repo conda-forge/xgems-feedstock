@@ -18,6 +18,7 @@ build:
 requirements:
   build:
     - {{ compiler('cxx') }}
+    - setuptools=59.7.0
     - cmake
     - ninja  # [win]
     - make  # [unix]
