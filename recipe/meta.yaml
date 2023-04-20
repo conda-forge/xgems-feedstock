@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://bitbucket.org/gems4/xgems/get/v{{ version }}.tar.gz
-  sha256: 12f38977fc3758f7b4997b4b39a7cc50b063bd612d41a84df693f251d0e889d4
+  sha256: 41b1cedfdd8190b1a206ae7e56f2339eb252edff2e1db498cf0acc2830d9fc78
 
   #git_url: https://dmiron@bitbucket.org/gems4/xgems.git
   #git_rev: fix-build
