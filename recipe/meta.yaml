@@ -40,7 +40,8 @@ test:
     - test -f ${PREFIX}/include/xGEMS/ChemicalEngine.hpp  # [unix]
     - if exist %LIBRARY_PREFIX%\include\xGEMS\ChemicalEngine.hpp (exit 0) else (exit 1)  # [win]
   imports:
-    - xgems # [win]
+    - xgems  # [win]
+    - xgems  # [linux]
 
 about:
   home: https://bitbucket.org/gems4/xgems
