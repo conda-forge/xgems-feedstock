@@ -1,11 +1,11 @@
-About xgems
-===========
+About xgems-feedstock
+=====================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/xgems-feedstock/blob/main/LICENSE.txt)
 
 Home: https://bitbucket.org/gems4/xgems
 
 Package license: LGPL-3.0-or-later
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/xgems-feedstock/blob/main/LICENSE.txt)
 
 Summary: The next-generation of C++ and Python API for GEMS geochemical modeling tool.
 

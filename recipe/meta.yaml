@@ -1,4 +1,4 @@
-{% set version = "1.0.5" %}
+{% set version = "1.0.7" %}
 
 package:
   name: xgems
@@ -6,13 +6,13 @@ package:
 
 source:
   url: https://bitbucket.org/gems4/xgems/get/v{{ version }}.tar.gz
-  sha256: f2859fae578f5e9d508f37f3d1935b3f3d64d07cfde6afe49125e003842e9111
-  
+  sha256: 9dc2e23b763a86f92a6259fb8cd4a773d986afebfb295d758c30ccc6202f8c1d
+
   #git_url: https://dmiron@bitbucket.org/gems4/xgems.git
   #git_rev: fix-build
 
 build:
-  number: 3
+  number: 4
   skip: true  # [win and vc<14]
 
 requirements:
@@ -22,23 +22,27 @@ requirements:
     - ninja  # [win]
     - make  # [unix]
   host:
-    - gems3k =4.3.3
-    - thermofun >=0.4.1
+    - gems3k =>4.3.5
+    - thermofun >=0.4.3
     - pybind11
+    - fmt
     - eigen
     - python
+    - pip
   run:
     - python
-    - gems3k =4.3.3
-    - thermofun >=0.4.1
+    - gems3k =>4.3.5
+    - thermofun >=0.4.3
 
 test:
   commands:
+    - cat ${SRC_DIR}/conda_test_runner.sh  # [unix]
     - test -d ${PREFIX}/include/xGEMS  # [unix]
     - test -f ${PREFIX}/include/xGEMS/ChemicalEngine.hpp  # [unix]
     - if exist %LIBRARY_PREFIX%\include\xGEMS\ChemicalEngine.hpp (exit 0) else (exit 1)  # [win]
   imports:
-    - xgems
+    - xgems  # [win]
+    - xgems  # [linux]
 
 about:
   home: https://bitbucket.org/gems4/xgems
