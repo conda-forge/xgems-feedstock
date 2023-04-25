@@ -25,6 +25,7 @@ requirements:
     - gems3k =>4.3.5
     - thermofun >=0.4.3
     - pybind11
+    - fmt
     - eigen
     - python
     - pip
