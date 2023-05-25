@@ -1,4 +1,4 @@
-{% set version = "1.0.7" %}
+{% set version = "1.0.8" %}
 
 package:
   name: xgems
@@ -6,13 +6,13 @@ package:
 
 source:
   url: https://bitbucket.org/gems4/xgems/get/v{{ version }}.tar.gz
-  sha256: 9dc2e23b763a86f92a6259fb8cd4a773d986afebfb295d758c30ccc6202f8c1d
+  sha256: c1612d63d900282a767a802de768a5d72864179e1a326c8ad19a1dc6060bee45
 
   #git_url: https://dmiron@bitbucket.org/gems4/xgems.git
   #git_rev: fix-build
 
 build:
-  number: 4
+  number: 0
   skip: true  # [win and vc<14]
 
 requirements:
