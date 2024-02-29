@@ -12,7 +12,7 @@ source:
   #git_rev: fix-build
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win and vc<14]
 
 requirements:
@@ -22,18 +22,21 @@ requirements:
     - ninja  # [win]
     - make  # [unix]
   host:
+    - eigen >=3.4.0
+    - spdlog >=1.10.0
     - gems3k =>4.3.5
     - thermofun >=0.4.3
     - pybind11
-    - fmt
-    - eigen
     - python
     - pip
   run:
-    - python
+    - eigen >=3.4.0
+    - spdlog >=1.10.0
     - gems3k =>4.3.5
-    - thermofun >=0.4.3
-
+    - thermofun >=0.4.3 
+    - python
+    - pip
+    
 test:
   commands:
     - cat ${SRC_DIR}/conda_test_runner.sh  # [unix]
