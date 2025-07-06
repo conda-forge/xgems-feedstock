@@ -8,6 +8,7 @@ cmake -G Ninja ^
       -DCMAKE_INSTALL_PREFIX:PATH="%LIBRARY_PREFIX%" ^
       -DCMAKE_INCLUDE_PATH:PATH="%LIBRARY_INC%" ^
       -DXGEMS_BUILD_DEMOS=OFF ^
+      -DCMAKE_CXX_FLAGS="/utf-8" ^
       ..
 if errorlevel 1 exit 1
 ninja install
