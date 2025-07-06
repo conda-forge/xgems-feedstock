@@ -30,6 +30,7 @@ requirements:
     - pybind11
     - python
     - pip
+    - setuptools
   run:
     - eigen >=3.4.0
     - spdlog >=1.10.0
