@@ -21,23 +21,26 @@ requirements:
     - {{ stdlib("c") }}
     - cmake
     - ninja  # [win]
-    - make  # [unix]
-  host:
-    - eigen >=3.4.0
-    - spdlog >=1.10.0
-    - gems3k =>4.3.5
-    - thermofun >=0.4.3
-    - pybind11
-    - python
+    - make
     - pip
     - setuptools
-  run:
+    - wheel
+  host:
+    - python
+    - setuptools
+    - wheel
+    - pybind11
     - eigen >=3.4.0
     - spdlog >=1.10.0
-    - gems3k =>4.3.5
-    - thermofun >=0.4.3
+    - gems3k =>4.4.3
+    - thermofun >=0.5.2
+  run:
     - python
     - pip
+    - eigen >=3.4.0
+    - spdlog >=1.10.0
+    - gems3k =>4.4.3
+    - thermofun >=0.5.2
 
 test:
   commands:
