@@ -27,6 +27,7 @@ requirements:
     - wheel
   host:
     - python
+    - pip
     - setuptools
     - wheel
     - pybind11
@@ -36,6 +37,7 @@ requirements:
     - thermofun >=0.4.3
   run:
     - python
+    - pip
     - eigen >=3.4.0
     - spdlog >=1.10.0
     - gems3k >=4.3.5
