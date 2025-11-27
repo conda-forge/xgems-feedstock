@@ -1,4 +1,4 @@
-{% set version = "2.0.1" %}
+{% set version = "2.0.2" %}
 
 package:
   name: xgems
@@ -6,13 +6,13 @@ package:
 
 source:
   url: https://github.com/gemshub/xgems/archive/v{{ version }}.tar.gz
-  sha256: 45ec3f2367ea864fa236fcc277388d4edd016221205b0b3ffa1dbded528cb0f8
+  sha256: 1a9e38b00fc2fcd5f93e7a724fa99236eb798138c39ce5dc1470b4a28fa791b7
 
   #git_url: https://dmiron@bitbucket.org/gems4/xgems.git
   #git_rev: fix-build
 
 build:
-  number: 3
+  number: 0
   skip: true  # [win and vc<14]
 
 requirements:
@@ -21,23 +21,26 @@ requirements:
     - {{ stdlib("c") }}
     - cmake
     - ninja  # [win]
-    - make  # [unix]
-  host:
-    - eigen >=3.4.0
-    - spdlog >=1.10.0
-    - gems3k =>4.3.5
-    - thermofun >=0.4.3
-    - pybind11
-    - python
+    - make
     - pip
     - setuptools
-  run:
+    - wheel
+  host:
+    - python
+    - setuptools
+    - wheel
+    - pybind11
     - eigen >=3.4.0
     - spdlog >=1.10.0
-    - gems3k =>4.3.5
-    - thermofun >=0.4.3
+    - gems3k =>4.4.3
+    - thermofun >=0.5.2
+  run:
     - python
     - pip
+    - eigen >=3.4.0
+    - spdlog >=1.10.0
+    - gems3k =>4.4.3
+    - thermofun >=0.5.2
 
 test:
   commands:
@@ -45,18 +48,18 @@ test:
     - test -d ${PREFIX}/include/xGEMS  # [unix]
     - test -f ${PREFIX}/include/xGEMS/ChemicalEngine.hpp  # [unix]
     - if exist %LIBRARY_PREFIX%\include\xGEMS\ChemicalEngine.hpp (exit 0) else (exit 1)  # [win]
-  imports:
-    - xgems  # [win]
-    - xgems  # [linux]
+#  imports:
+#    - xgems  # [win]
+#    - xgems  # [linux]
 
 about:
-  home: https://bitbucket.org/gems4/xgems
+  home: https://github.com/gemshub/xgems
   license: LGPL-3.0-or-later
   license_family: LGPL
   license_file: LICENSE
   summary: The next-generation of C++ and Python API for GEMS geochemical modeling tool.
-  doc_url: https://bitbucket.org/gems4/xgems
-  dev_url: https://bitbucket.org/gems4/xgems
+  doc_url: https://github.com/gemshub/xgems
+  dev_url: https://github.com/gemshub/xgems
 
 extra:
   recipe-maintainers:
