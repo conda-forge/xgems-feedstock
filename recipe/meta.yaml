@@ -6,41 +6,40 @@ package:
 
 source:
   url: https://github.com/gemshub/xgems/archive/v{{ version }}.tar.gz
-  sha256: 1a9e38b00fc2fcd5f93e7a724fa99236eb798138c39ce5dc1470b4a28fa791b7
-
-  #git_url: https://dmiron@bitbucket.org/gems4/xgems.git
-  #git_rev: fix-build
+  sha256: ea43e9e4d1082073cbb0c587026e18579a14c67b5f31b9ca4c1f0adadf8ad6da
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win and vc<14]
 
 requirements:
   build:
     - {{ compiler('cxx') }}
-    - {{ stdlib("c") }}
+    - {{ compiler('c') }}
+    - {{ stdlib('c') }}
     - cmake
     - ninja  # [win]
-    - make
-    - pip
-    - setuptools
-    - wheel
+    - make   # [unix]
+    - python  # [win or osx]
+    - pip  # [win or osx]
+    - setuptools  # [win or osx]
+    - wheel  # [win or osx]
+
   host:
     - python
+    - pip
     - setuptools
     - wheel
     - pybind11
     - eigen >=3.4.0
-    - spdlog >=1.10.0
-    - gems3k =>4.4.3
-    - thermofun >=0.5.2
+    - spdlog
+    - gems3k =>4.4.4
+    - thermofun >=0.5.4
+
   run:
     - python
-    - pip
-    - eigen >=3.4.0
-    - spdlog >=1.10.0
-    - gems3k =>4.4.3
-    - thermofun >=0.5.2
+    - gems3k =>4.4.4
+    - thermofun >=0.5.4
 
 test:
   commands:
@@ -48,9 +47,9 @@ test:
     - test -d ${PREFIX}/include/xGEMS  # [unix]
     - test -f ${PREFIX}/include/xGEMS/ChemicalEngine.hpp  # [unix]
     - if exist %LIBRARY_PREFIX%\include\xGEMS\ChemicalEngine.hpp (exit 0) else (exit 1)  # [win]
-#  imports:
-#    - xgems  # [win]
-#    - xgems  # [linux]
+  imports:
+    - xgems  # [win]
+    - xgems  # [linux]
 
 about:
   home: https://github.com/gemshub/xgems
@@ -66,3 +65,4 @@ extra:
     - gdmiron
     - dimitrikulik
     - sdmytrievs
+    - allanleal
