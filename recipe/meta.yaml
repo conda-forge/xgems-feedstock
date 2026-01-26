@@ -9,7 +9,7 @@ source:
   sha256: ea43e9e4d1082073cbb0c587026e18579a14c67b5f31b9ca4c1f0adadf8ad6da
 
 build:
-  number: 2
+  number: 3
   skip: true  # [win and vc<14]
 
 requirements:
@@ -33,13 +33,13 @@ requirements:
     - pybind11
     - eigen >=3.4.0
     - spdlog
-    - gems3k =>4.4.4
-    - thermofun >=0.5.4
+    - gems3k 
+    - thermofun 
 
   run:
     - python
-    - gems3k =>4.4.4
-    - thermofun >=0.5.4
+    - gems3k 
+    - thermofun 
 
 test:
   commands:
