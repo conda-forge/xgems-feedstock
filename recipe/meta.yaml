@@ -1,4 +1,4 @@
-{% set version = "2.0.2" %}
+{% set version = "2.1.0" %}
 
 package:
   name: xgems
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://github.com/gemshub/xgems/archive/v{{ version }}.tar.gz
-  sha256: ea43e9e4d1082073cbb0c587026e18579a14c67b5f31b9ca4c1f0adadf8ad6da
+  sha256: 55c5a77b58687de625b261598375f3ac884edb71b78382de38994554fbfe7381
 
 build:
-  number: 3
+  number: 0
   skip: true  # [win and vc<14]
 
 requirements:
@@ -33,13 +33,13 @@ requirements:
     - pybind11
     - eigen >=3.4.0
     - spdlog
-    - gems3k 
-    - thermofun 
+    - gems3k
+    - thermofun
 
   run:
     - python
-    - gems3k 
-    - thermofun 
+    - gems3k
+    - thermofun
 
 test:
   commands:
