@@ -1,4 +1,4 @@
-{% set version = "2.1.1" %}
+{% set version = "2.1.2" %}
 
 package:
   name: xgems
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/gemshub/xgems/archive/v{{ version }}.tar.gz
-  sha256: 2ee710fc2f6b32dc809e913f0168c7946b41ef4361b2fd80c65f090ea04f1d87
+  sha256: 6206533e1f3462e0cff377bdb628213a4e6f0f864af98431904058781075b32e
 
 build:
   number: 0
